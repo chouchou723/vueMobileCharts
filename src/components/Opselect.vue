@@ -1,7 +1,7 @@
 <template>
       <div class="selectT">
         <div class="clickselect" >
-          <input type="text" v-model="name" @blur="close1" @click="close">
+          <input type="text" v-model="name" @blur="close1" @click="close" readonly style="user-select:none">
            <div :class="[show?'show':'hidden']">
            	<div class="option" v-for="(item,index) in op.filter(item=>item.name!==name)" :key="item.id"  @click="showh(item)">{{item.name}}</div>
            </div>

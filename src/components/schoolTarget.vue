@@ -20,9 +20,8 @@
         <div style="margin-left:.2rem;font-size:.3rem;overflow:hidden;text-overflow:ellipsis;display:-webkit-box;line-clamp:3;box-orient:vertical;max-height: 1.2rem;">{{item.name}}</div>
         <div class="rankL">
           <span :style="`width:${item.width*100/(item.target)>100?85:item.width*100/(item.target)}%;display:inline-block;background:${item.width<item.target?'#1fb5ad':'#e57959'};height:100% `"></span>
-          <span :style="`position:absolute;top:0;left:0;z-index:-1;height:100%;width:0.05rem;width:${item.target*100/(item.width*2)>100?100:item.target*100/(item.width*2)}%;background:#bdb8b8;display:inline-block;
-          border-right:0.05rem solid black`"></span>
-          <span :style="`position:absolute;top:0;height:100%;width:0.05rem;background:black;left:${item.target*100/(item.width*2)}%;`"></span>
+          <span :style="`position:absolute;top:0;left:0;z-index:-1;height:100%;width:0.05rem;width:${item.target*100/(item.width*2)>100?100:item.target*100/(item.width*2)}%;background:#bdb8b8;display:inline-block;`"></span>
+          <span :style="`position:absolute;top:0;height:100%;width:0.05rem;background:black;left:${item.target*100/(item.width*2)>100?100:item.target*100/(item.width*2)}%;`"></span>
           <span :style="`position:absolute;bottom:-0.5rem;left:${(item.target*100/(item.width*2)-8)>100?84:item.target*100/(item.width*2)-8}%;font-size:.3rem;color:#e57959;width:1rem`">指标{{item.target}}</span>
           <span style="position:absolute;left:.2rem;height:100%;line-height:0.8rem;color:white;font-size:.3rem;">{{item.desc}}</span>
         </div>
