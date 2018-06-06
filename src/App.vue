@@ -42,7 +42,7 @@ export default {
  #app  .calendar-body{
   width: 100%;
  }
-#app .datepicker__button-cancel,.datepicker__button-select{
+#app .datepicker__button-cancel, #app .datepicker__button-select{
   font-size: .3rem;
   padding:.1rem .2rem;
   border:1px solid gainsboro;
