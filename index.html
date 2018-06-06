@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <script>
+		
+// document.documentElement.style.fontSize = document.documentElement.clientWidth / 7.5 + 'px';
+document.documentElement.style.fontSize = document.documentElement.clientWidth*devicePixelRatio / 7.5 + 'px';
+var scale = 1 / devicePixelRatio;
+document.querySelector('meta[name="viewport"]').setAttribute('content','initial-scale=' + scale + ', maximum-scale=' + scale + ', minimum-scale=' + scale + ', user-scalable=no');
+	</script>
+  <style>
+    body{
+      margin:0;
+      padding:0;
+       background: #f7f7f7;
+    }
+    html,body{
+      width: 100%;
+      height: 100%;
+    }
+    *{
+      -webkit-tap-highlight-color:transparent;
+    }
+  </style>
+    <title>vueReport</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+</html>
