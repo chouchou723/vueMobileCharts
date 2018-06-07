@@ -69,11 +69,12 @@
 
 <script>
 import Opselect from './Opselect.vue'
- import VueDatepickerLocal  from './VueDatepickerLocal.vue'
- import IEcharts from 'vue-echarts-v3/src/full.js';
+ import VueDatepickerLocal  from './VueDatepickerLocal.vue';
+ import IEcharts from 'vue-echarts-v3/src/lite.js';
+ import 'echarts/lib/chart/line';
 export default {
   components:{
-    Opselect,IEcharts,VueDatepickerLocal
+    Opselect,VueDatepickerLocal,IEcharts
   },
   data () {
     return {

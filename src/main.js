@@ -5,7 +5,7 @@ import App from './App'
 import router from './router'
 
 Vue.config.productionTip = false
-import IEcharts from 'vue-echarts-v3/src/full.js';
+// import IEcharts from 'vue-echarts-v3/src/full.js';
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

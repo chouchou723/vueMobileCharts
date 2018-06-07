@@ -126,9 +126,9 @@ export default {
       const time = new Date(year, month, 1)
       const dow = $this.local.dow || 7
       time.setDate(0) // switch to the last day of last month
-      let lastDay = time.getDate()
-      const week = time.getDay() || 7
-      let count = dow <= week ? (week - dow + 1) : (week + (7 - dow + 1))
+      let lastDay = time.getDate()//the date of last month31
+      const week = time.getDay() || 7//the weekday of last month4
+      let count = dow <= week ? (week - dow + 1) : (week + (7 - dow + 1))//循环显示上月最后的几天
       while (count > 0) {
         days.push({
           i: lastDay - count + 1,
@@ -138,8 +138,8 @@ export default {
         })
         count--
       }
-      time.setMonth(time.getMonth() + 2, 0) // switch to the last day of the current month
-      lastDay = time.getDate()
+      time.setMonth(time.getMonth() + 2, 0) // switch to the last day of the current month7
+      lastDay = time.getDate()//get the date of the current month
       let i = 1
       for (i = 1; i <= lastDay; i++) {
         days.push({
@@ -252,7 +252,7 @@ export default {
 <style>
 .calendar {
      float: left;
-     display: inline-block;
+     /* display: inline-block; */
      -webkit-user-select: none;
      -moz-user-select: none;
      -ms-user-select: none;

@@ -72,11 +72,12 @@
 
 <script>
 import schoolTarget from './schoolTarget.vue'
- import IEcharts from 'vue-echarts-v3/src/full.js';
+ import IEcharts from 'vue-echarts-v3/src/lite.js';
+ import 'echarts/lib/chart/pie';
  import VueDatepickerLocal  from './VueDatepickerLocal.vue'
 export default {
   components:{
-    schoolTarget,IEcharts,VueDatepickerLocal
+    schoolTarget,VueDatepickerLocal
   },
   data () {
     return {

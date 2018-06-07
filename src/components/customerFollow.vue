@@ -38,7 +38,7 @@
       <div :class="['selecto dateS',a==3?'dateselect':'']" @click="active(3)">日期范围</div>
     </div>
      <div class="dateP">   
-      <vue-datepicker-local v-show="dateShow" v-model="time" placeholder="请选择日期" :showButtons='trueO' />
+      <vue-datepicker-local v-show="dateShow" v-model="time" placeholder="请选择日期" :showButtons='trueO' @confirm='getDate'/>
    </div>
     <div class="selectT selectF" >
     	<div :class="['tagF', choose===1?'tabSelect':'']" @click="chooseS(1)">新增量</div>
@@ -58,10 +58,11 @@
 
 <script>
  import VueDatepickerLocal  from './VueDatepickerLocal.vue'
- import IEcharts from 'vue-echarts-v3/src/full.js';
+ import IEcharts from 'vue-echarts-v3/src/lite.js';
+ import 'echarts/lib/chart/line';
 export default {
   components:{
-   IEcharts,VueDatepickerLocal
+    IEcharts,VueDatepickerLocal
   },
   data () {
     return {
@@ -187,6 +188,9 @@ export default {
     },
     chooseS(num){
       this.choose = num;
+    },
+    getDate(){
+      console.log(this.time)
     }
   },
   created(){

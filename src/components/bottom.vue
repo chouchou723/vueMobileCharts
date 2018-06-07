@@ -42,7 +42,7 @@ export default {
     return {
       show:false,
       // title:'客户跟进',
-     	choose:1,
+     	// choose:1,
     }
   },
   methods: {
@@ -55,52 +55,13 @@ export default {
       }
     },
     chooseS(num){
-      this.choose = num;
+    //   this.choose = num;
        this.show = false;
     },
-    getChoose(){
-    	let path = this.$route.path
-  	switch (path) {
-  		case '/customerFollow':
-  			this.choose = 1;
-  			break;
-  		case '/salePer':
-  			this.choose = 2;
-
-  			break;
-  		case '/saleTarget':
-  			this.choose = 3;
-
-  			break;
-  		case '/saleRank':
-  			this.choose = 4;
-
-  			break;
-  		case '/courseTotal':
-  			this.choose = 5;
-
-  			break;
-  		case '/courseTarget':
-  			this.choose = 6;
-
-  			break;
-  		case '/signTotal':
-  			this.choose = 7;
-
-  			break;
-  		case '/courseRank':
-  			this.choose = 8;
-
-  			break;
-  		default:
-  			// statements_def
-  			break;
-  	}
-  }
   },
   created(){
   	// console.log(this.$route.path)
-  	this.getChoose();
+  	// this.getChoose();
   	
   },
   mounted(){
@@ -114,31 +75,55 @@ export default {
   computed:{
   	title(){
   		let path = this.$route.path
+		switch (path) {
+			case '/customerFollow':
+				return '客户跟进'
+			case '/salePer':
+				return  '销售业绩';
+			case '/saleTarget':
+				return '销售指标';
+			case '/saleRank':
+				return '销售业绩排行';
+			case '/courseTotal':
+				return '课耗统计';
+			case '/courseTarget':
+				return '课耗指标';
+			case '/signTotal':
+				return '报名统计';
+			case '/courseRank':
+				return '课耗排行榜';
+			default:
+				// statements_def
+				break;
+		}
+	  },
+
+	choose(){
+		let path = this.$route.path
+		// console.log(path)
   	switch (path) {
-		case '/':
-  			return '客户跟进'
   		case '/customerFollow':
-  			return '客户跟进'
+  			return 1;
   		case '/salePer':
-  			return  '销售业绩';
+  			return 2;
   		case '/saleTarget':
-  			return '销售指标';
+  			return 3;
   		case '/saleRank':
-  			return '销售业绩排行';
+		  return 4;
   		case '/courseTotal':
-  			return '课耗统计';
+		  return 5;
   		case '/courseTarget':
-  			return '课耗指标';
+  			return 6;
   		case '/signTotal':
-  			return '报名统计';
+  			return 7;
   		case '/courseRank':
-  			return '课耗排行榜';
+  			return 8;
   		default:
   			// statements_def
   			break;
-  	}
-  	}
-  }
+	  }
+	}
+   }
 }
 </script>
 

@@ -1,8 +1,8 @@
 <template>
       <div class="selectT">
         <div class="clickselect" >
-          <input type="text" v-model="name" @blur="close1" @click="close" readonly style="user-select:none">
-           <div :class="[show?'show':'hidden']">
+          <input type="text" v-model="name" @blur="close1"  @touchend="close" readonly style="user-select:none;" class="input">
+           <div :class="[show?'show':'hidden']" >
            	<div class="option" v-for="(item,index) in op.filter(item=>item.name!==name)" :key="item.id"  @click="showh(item)">{{item.name}}</div>
            </div>
         </div>
@@ -31,11 +31,28 @@ export default {
     close1(){
       this.show = false;
     }, 
-    showh(a){
+    showh(a){     
     	this.$emit('showh',a)
 
     }
+  },
+  mounted(){
+    // document.querySelector('#app').addEventListener('touchend', (e)=> {
+    //   // console.log(e.target.className)
+    //         if(e.target.className !== 'option') {  
+    //           if(this.show){
+    //     this.show = false;
+    //   }else{
+    //     this.show = true;
+    //   }
+    //         }  
+    //     });  
   }
+  // watch:{
+        // "name": function(newVal, oldVal){
+        //   if()
+        // // console.log('new: %s, old: %s', newVal, oldVal)
+        // }
 }
 </script>
 

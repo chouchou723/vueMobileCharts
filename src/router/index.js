@@ -22,14 +22,16 @@ export default new Router({
       path: '/',
       name: 'home',
       component: home,
-      children:[{
-      path: '/',
-      name: 'customerFollow',
-      component: customerFollow
-    },
+      redirect:'/customerFollow',
+      children:[
+    //     {
+    //   path: '/',
+    //   name: 'customerFollow',
+    //   component: customerFollow
+    // },
      {
-      path: '/SalePer',
-      name: 'SalePer',
+      path: '/salePer',
+      name: 'salePer',
       component: SalePer
     },
      {

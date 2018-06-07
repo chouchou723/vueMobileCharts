@@ -58,10 +58,12 @@
 
 <script>
  import VueDatepickerLocal  from './VueDatepickerLocal.vue'
- import IEcharts from 'vue-echarts-v3/src/full.js';
+ import IEcharts from 'vue-echarts-v3/src/lite.js';
+ import 'echarts/lib/chart/line';
+ 
 export default {
   components:{
-    IEcharts,VueDatepickerLocal
+    VueDatepickerLocal,IEcharts
   },
   data () {
     return {
